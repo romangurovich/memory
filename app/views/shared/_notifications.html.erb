@@ -1,7 +1,7 @@
 <% if notice %>
-  <%= render 'shared/notification', notification_type: 'positive' %>
+  <%= render 'shared/notification', notification_type: 'positive', message: notice %>
 <% end %>
 
 <% if alert %>
-  <%= render 'shared/notification', notification_type: 'warning' %>
+  <%= render 'shared/notification', notification_type: 'warning', message: alert %>
 <% end %>
