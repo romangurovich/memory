@@ -1,7 +1,7 @@
 <% if notice %>
-  <p class="ui positive message"><%= notice %></p>
+  <%= render 'shared/notification', notification_type: 'positive' %>
 <% end %>
 
 <% if alert %>
-  <p class="ui warning message"><%= alert %></p>
+  <%= render 'shared/notification', notification_type: 'warning' %>
 <% end %>

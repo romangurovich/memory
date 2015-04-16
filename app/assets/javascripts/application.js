@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require semantic-ui
+//= require global
 //= require_tree .
