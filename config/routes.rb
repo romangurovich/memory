@@ -1,13 +1,20 @@
 Rails.application.routes.draw do
   devise_for :users
-    devise_scope :user do
-      authenticated :user do
-        root to: 'devise/registrations#edit'
-      end
-      unauthenticated :user do
-        root to: 'devise/registrations#new', as: :unauthenticated_root
-      end
+
+  devise_scope :user do
+    authenticated :user do
+      root to: 'users#dashboard'
     end
+    unauthenticated :user do
+      root to: 'devise/registrations#new', as: :unauthenticated_root
+    end
+  end
+
+  resources :users, only: [:index] do
+    member do
+      get 'dashboard'
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
