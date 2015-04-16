@@ -28,6 +28,9 @@ gem 'devise', '~> 3.4.1'
 # css framework
 gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass', branch: 'v1.0beta'
 
+# icon fonts
+gem 'font-awesome-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
