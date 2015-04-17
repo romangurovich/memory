@@ -1,0 +1,22 @@
+<h2>My Profile</h2>
+
+<%= form_for(@user, url: user_path(@user), html: { method: :patch, class: "ui form" }) do |f| %>
+
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Update my Profile", class: "ui green button" %>
+  </div>
+<% end %>
+
+<h4>
+  <%= link_to 'Want to update your email or password?', edit_user_registration_path(@user) %>
+</h4>

@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :users, only: [:index] do
+  resources :users, only: %i(index edit update) do
     member do
       get 'dashboard'
     end

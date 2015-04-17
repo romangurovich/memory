@@ -12,7 +12,7 @@
       FAQ
     </a>
     <% if user_signed_in? %>
-      <%= link_to 'My Profile', edit_user_registration_path(current_user), class: 'item' %>
+      <%= link_to 'My Profile', edit_user_path(current_user), class: 'item' %>
       <%= link_to destroy_user_session_path, class: 'item', method: :delete do %>
         <span>Log Out</span>
         <i class="fa fa-sign-out"></i>
