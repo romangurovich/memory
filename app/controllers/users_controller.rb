@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :authenticate_user!, :except => [:index]
 
   def index
-    @users = User.all
+    @users = User.order(:first_name).page params[:page]
   end
 
   def dashboard

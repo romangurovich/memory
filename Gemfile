@@ -31,6 +31,9 @@ gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass', branch: 'v1.0beta'
 # icon fonts
 gem 'font-awesome-rails'
 
+# pagination
+gem 'kaminari', '~> 0.16.2'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
